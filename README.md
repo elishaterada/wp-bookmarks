@@ -6,9 +6,9 @@ WP Bookmarks is a single-page web app interface which provides simple and fast U
 
 ### WP Bookmarks for WordPress ###
 
-# Download the latest release.
-# Copy the files from /dist/ folder to a new folder /wp-bookmarks/ inside your WordPress child theme (recommended)
-# Include JavaScript file and CSS file in your child theme with (wp_enqueue_scripts](http://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts)
+* Download the latest release.
+* Copy the files from /dist/ folder to a new folder /wp-bookmarks/ inside your WordPress child theme (recommended)
+* Include JavaScript file and CSS file in your child theme with (wp_enqueue_scripts](http://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts)
 
 ### Dependencies ###
 
