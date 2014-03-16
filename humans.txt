@@ -1,0 +1,20 @@
+/* TEAM */
+    Developer: Elisha Terada
+    Contact:   elishaterada@gmail.com
+    URI:       http://elishaterada.com/
+
+/* THANKS */
+    Template:   Initializr
+    URI:        http://www.initializr.com/
+
+    Grantfile.js Template: 10up
+    URI:                   http://10up.com
+    Twitter:               @10up
+
+    Grantfile.js Template : Eric Mann
+    URI:                    http://eamann.com
+    Twitter:                @ericmann
+
+/* SITE */
+    Created:  2013-06-03
+    Template: https://github.com/10up/grunt-wp-theme
