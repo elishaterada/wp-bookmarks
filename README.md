@@ -14,8 +14,8 @@ WP Bookmarks is a single-page web app interface which provides simple and fast U
 
 WP Bookmarks depends on following:
 
-# A custom post type for bookmarks (or use /wordpress/bookmark-post-type.php )
-# Custom fields for the bookmarks (or use /wordpress/bookmark-custom-fields.php)
-# jQuery
-# [Underscore.js](http://underscorejs.org/)
-# [Bootstrap 3](http://getbootstrap.com/)
+* A custom post type for bookmarks (or use /wordpress/bookmark-post-type.php )
+* Custom fields for the bookmarks (or use /wordpress/bookmark-custom-fields.php)
+* jQuery
+* [Underscore.js](http://underscorejs.org/)
+* [Bootstrap 3](http://getbootstrap.com/)
