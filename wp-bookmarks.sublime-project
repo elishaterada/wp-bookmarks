@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Applications/MAMP/htdocs/wp-bookmarks",
+            "folder_exclude_patterns": ["components", "node_modules", "wordpress", "sample", "dist"],
+            "file_exclude_patterns": ["*.css", "*.txt", "*.sublime-*", "LICENSE", "package.json", "bower.json", ".bowerrc"]
+		}
+	]
+}
