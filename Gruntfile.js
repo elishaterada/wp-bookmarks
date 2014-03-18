@@ -82,6 +82,24 @@ module.exports = function( grunt ) {
                 ext: '.min.css'
             }
         },
+        jst: {
+            compile: {
+                options: {
+                    //namespace: "anotherNameThanJST",      //Default: 'JST'
+                    prettify: false,                        //Default: false|true
+                    amdWrapper: false,                      //Default: false|true
+                    templateSettings: {
+                    },
+                    processName: function(filename) {
+                        //Shortens the file path for the template.
+                        return filename.slice(filename.indexOf("tmpls"), filename.length);
+                    }
+                },
+                files: {
+                    "dist/js/templates.js": ["tmpls/**/*.html"]
+                }
+            }
+        },
         watch:  {
             less: {
                 files: ['less/*.less'],
@@ -96,12 +114,17 @@ module.exports = function( grunt ) {
                 options: {
                     debounceDelay: 500
                 }
+            },
+            templates: {
+                files: ['tmpls/*.html'],
+                tasks: ['jst']
             }
         }
     } );
 
     // Load other tasks
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-jst');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -109,6 +132,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.
-    grunt.registerTask( 'default', ['jshint', 'concat', 'uglify', 'less', 'cssmin'] );
+    grunt.registerTask( 'default', ['jshint', 'jst', 'concat', 'uglify', 'less', 'cssmin'] );
     grunt.util.linefeed = '\n';
 };
