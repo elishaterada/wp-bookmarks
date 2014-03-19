@@ -2,7 +2,7 @@
     <% _.each(posts, function(p) { %>
     <li class="bookmark">
         <a class="bookmark-link" href="<%= p.custom_fields.link %>" title="<%= p.title %>" target="_blank"></a>
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image: url('');"> </div>
         <div class="details">
             <strong><%= p.title %></strong>
             <div class="tag-links">
