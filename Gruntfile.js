@@ -62,24 +62,9 @@ module.exports = function( grunt ) {
         less:   {
             all: {
                 files: {
-                    'dist/css/wp-bookmarks.css': 'less/*.less'
+                    'dist/css/wp-bookmarks.css': 'less/wp-bookmarks.less',
+                    'dist/css/app.css': 'less/app.less'
                 }
-            }
-        },
-        cssmin: {
-            options: {
-                banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                    ' * <%= pkg.homepage %>\n' +
-                    ' * Copyright (c) <%= grunt.template.today("yyyy") %>;' +
-                    ' * Licensed GPLv2+' +
-                    ' */\n'
-            },
-            minify: {
-                expand: true,
-                cwd: 'dist/css/',
-                src: ['wp-bookmarks.css'],
-                dest: 'dist/css/',
-                ext: '.min.css'
             }
         },
         jst: {
@@ -103,7 +88,7 @@ module.exports = function( grunt ) {
         watch:  {
             less: {
                 files: ['less/*.less'],
-                tasks: ['less', 'cssmin'],
+                tasks: ['less'],
                 options: {
                     debounceDelay: 500
                 }
@@ -118,6 +103,10 @@ module.exports = function( grunt ) {
             templates: {
                 files: ['tmpls/*.html'],
                 tasks: ['jst']
+            },
+            options: {
+                livereload: true,
+                files: ['dist/**/*']
             }
         }
     } );
@@ -127,11 +116,10 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-jst');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.
-    grunt.registerTask( 'default', ['jshint', 'jst', 'concat', 'uglify', 'less', 'cssmin'] );
+    grunt.registerTask( 'default', ['jshint', 'jst', 'concat', 'uglify', 'less'] );
     grunt.util.linefeed = '\n';
 };
