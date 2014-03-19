@@ -1,0 +1,65 @@
+#wp-bookmarks {
+    margin: 0 auto;
+    width: 100%;
+    .bookmarks {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        .bookmark {
+            position: relative;
+            display: inline-block;
+            list-style: none;
+            height: auto;
+            padding: 0;
+            margin: 17px;
+            float: left;
+            width: 200px;
+            height: auto;
+            vertical-align: top;
+            -webkit-transition: top 0.2s;
+            -moz-transition: top 0.2s;
+            -ms-transition: top 0.2s;
+            -o-transition: top 0.2s;
+            transition: top 0.2s;
+            top: 10px;
+            &:after {
+                content: "";
+                position: absolute;
+                height: 0;
+                width: 200px;
+                background: #B4D3C8;
+                -webkit-transition: height 0.2s;
+                -moz-transition: height 0.2s;
+                -ms-transition: height 0.2s;
+                -o-transition: height 0.2s;
+                transition: height 0.2s;
+            }
+            &:hover {
+                top: 0;
+                &:after {
+                    height: 10px;
+                }
+            }
+            .bookmark-link {
+                text-decoration: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                z-index: 500;
+                margin: 1em;
+            }
+            .thumb {
+                background: #ddd;
+                width: 200px;
+                height: 150px;
+            }
+            .details {
+                background: #fff;
+                padding: 1em;
+            }
+        }
+    }
+}

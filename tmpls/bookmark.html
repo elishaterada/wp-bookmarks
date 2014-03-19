@@ -1,7 +1,11 @@
-<ul>
-<% _.each(posts, function(p) { %>
-
-<li><%= p.title %></li>
-
-<% }); %>
+<ul class="bookmarks">
+    <% _.each(posts, function(p) { %>
+    <li class="bookmark">
+        <a class="bookmark-link" href="" title="<%= p.title %>"></a>
+        <div class="thumb"></div>
+        <div class="details">
+            <strong><%= p.title %></strong>
+        </div>
+    </li>
+    <% }); %>
 </ul>
