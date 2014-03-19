@@ -1,3 +1,6 @@
+@wp-bookmarks-primary-color: #86DF35;
+@wp-bookmarks-demphasized-color: #BBB;
+
 #wp-bookmarks {
     margin: 0 auto;
     width: 100%;
@@ -16,23 +19,23 @@
             width: 200px;
             height: auto;
             vertical-align: top;
-            -webkit-transition: top 0.2s;
-            -moz-transition: top 0.2s;
-            -ms-transition: top 0.2s;
-            -o-transition: top 0.2s;
-            transition: top 0.2s;
+            -webkit-transition: top 0.25s ease;
+            -moz-transition: top 0.25s ease;
+            -ms-transition: top 0.25s ease;
+            -o-transition: top 0.25s ease;
+            transition: top 0.25s ease;
             top: 10px;
             &:after {
                 content: "";
                 position: absolute;
                 height: 0;
                 width: 200px;
-                background: #B4D3C8;
-                -webkit-transition: height 0.2s;
-                -moz-transition: height 0.2s;
-                -ms-transition: height 0.2s;
-                -o-transition: height 0.2s;
-                transition: height 0.2s;
+                background: @wp-bookmarks-primary-color;
+                -webkit-transition: height 0.25s ease;
+                -moz-transition: height 0.25s ease;
+                -ms-transition: height 0.25s ease;
+                -o-transition: height 0.25s ease;
+                transition: height 0.25s ease;
             }
             &:hover {
                 top: 0;
@@ -49,16 +52,36 @@
                 left: 0;
                 display: block;
                 z-index: 500;
-                margin: 1em;
             }
             .thumb {
-                background: #ddd;
+                background: @wp-bookmarks-demphasized-color;
                 width: 200px;
                 height: 150px;
             }
             .details {
                 background: #fff;
                 padding: 1em;
+                .tag-links {
+                    position: relative;
+                    z-index: 560;
+                    margin-top: 1rem;
+                    a {
+                        color: @wp-bookmarks-demphasized-color;
+                        cursor: pointer;
+                        font-size: 0.75rem;
+                        padding-bottom: 0.4rem;
+                        padding-right: 0.35rem;
+                        -webkit-transition: color 0.25s ease;
+                        -moz-transition: color 0.25s ease;
+                        -ms-transition: color 0.25s ease;
+                        -o-transition: color 0.25s ease;
+                        transition: color 0.25s ease;
+                        &:hover {
+                            color: @wp-bookmarks-primary-color;
+                            text-decoration: underline;
+                        }
+                    }
+                }
             }
         }
     }

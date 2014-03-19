@@ -1,10 +1,17 @@
 <ul class="bookmarks">
     <% _.each(posts, function(p) { %>
     <li class="bookmark">
-        <a class="bookmark-link" href="" title="<%= p.title %>"></a>
+        <a class="bookmark-link" href="<%= p.custom_fields.link %>" title="<%= p.title %>" target="_blank"></a>
         <div class="thumb"></div>
         <div class="details">
             <strong><%= p.title %></strong>
+            <div class="tag-links">
+                <% _.each(p.taxonomy_wp_bookmarks_categories, function(t) { %>
+                <span class="tag">
+                    <a class="<%= t.slug %>"><%= t.title %></a>
+                </span>
+                <% }); %>
+            </div>
         </div>
     </li>
     <% }); %>

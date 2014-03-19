@@ -17,11 +17,11 @@
   width: 200px;
   height: auto;
   vertical-align: top;
-  -webkit-transition: top 0.2s;
-  -moz-transition: top 0.2s;
-  -ms-transition: top 0.2s;
-  -o-transition: top 0.2s;
-  transition: top 0.2s;
+  -webkit-transition: top 0.25s ease;
+  -moz-transition: top 0.25s ease;
+  -ms-transition: top 0.25s ease;
+  -o-transition: top 0.25s ease;
+  transition: top 0.25s ease;
   top: 10px;
 }
 #wp-bookmarks .bookmarks .bookmark:after {
@@ -29,12 +29,12 @@
   position: absolute;
   height: 0;
   width: 200px;
-  background: #B4D3C8;
-  -webkit-transition: height 0.2s;
-  -moz-transition: height 0.2s;
-  -ms-transition: height 0.2s;
-  -o-transition: height 0.2s;
-  transition: height 0.2s;
+  background: #86df35;
+  -webkit-transition: height 0.25s ease;
+  -moz-transition: height 0.25s ease;
+  -ms-transition: height 0.25s ease;
+  -o-transition: height 0.25s ease;
+  transition: height 0.25s ease;
 }
 #wp-bookmarks .bookmarks .bookmark:hover {
   top: 0;
@@ -51,14 +51,34 @@
   left: 0;
   display: block;
   z-index: 500;
-  margin: 1em;
 }
 #wp-bookmarks .bookmarks .bookmark .thumb {
-  background: #ddd;
+  background: #bbbbbb;
   width: 200px;
   height: 150px;
 }
 #wp-bookmarks .bookmarks .bookmark .details {
   background: #fff;
   padding: 1em;
+}
+#wp-bookmarks .bookmarks .bookmark .details .tag-links {
+  position: relative;
+  z-index: 560;
+  margin-top: 1rem;
+}
+#wp-bookmarks .bookmarks .bookmark .details .tag-links a {
+  color: #bbbbbb;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding-bottom: 0.4rem;
+  padding-right: 0.35rem;
+  -webkit-transition: color 0.25s ease;
+  -moz-transition: color 0.25s ease;
+  -ms-transition: color 0.25s ease;
+  -o-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+#wp-bookmarks .bookmarks .bookmark .details .tag-links a:hover {
+  color: #86df35;
+  text-decoration: underline;
 }
