@@ -106,7 +106,7 @@ module.exports = function( grunt ) {
             },
             options: {
                 livereload: true,
-                files: ['dist/**/*']
+                files: ['dist/**/*', '*.html']
             }
         }
     } );
