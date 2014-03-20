@@ -16,6 +16,7 @@
   margin-left: 1em;
 }
 #wp-bookmarks .search-group .search {
+  -webkit-appearance: none;
   font-family: inherit;
   font-size: 2em;
   background: none;
@@ -59,7 +60,6 @@
   list-style: none;
   padding: 0;
   margin: 17px;
-  float: left;
   width: 200px;
   height: auto;
   vertical-align: top;
