@@ -1,13 +1,59 @@
 #wp-bookmarks {
   margin: 0 auto;
   width: 100%;
+  font-size: 1em;
 }
-#wp-bookmarks .bookmarks {
+#wp-bookmarks .search-group {
+  text-align: center;
+  position: relative;
+}
+#wp-bookmarks .search-group .icon-search {
+  opacity: 0.2;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  margin-top: 1.3em;
+  margin-left: 1em;
+}
+#wp-bookmarks .search-group .search {
+  font-family: inherit;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #bbbbbb;
+  font-weight: 300;
+  padding: 0.5em 0.5em 0.5em 2em;
+  width: 8.5em;
+  -webkit-transition: background 0.25s ease;
+  -moz-transition: background 0.25s ease;
+  -ms-transition: background 0.25s ease;
+  -o-transition: background 0.25s ease;
+  transition: background 0.25s ease;
+}
+#wp-bookmarks .search-group .search:focus {
+  background: #fff;
+}
+#wp-bookmarks .sort-options {
+  list-style: none;
+  margin: 0;
+  padding: 1em 2em;
+  text-align: right;
+  color: #bbbbbb;
+}
+#wp-bookmarks .sort-options a {
+  cursor: pointer;
+}
+#wp-bookmarks .sort-options a:hover,
+#wp-bookmarks .sort-options a.asc,
+#wp-bookmarks .sort-options a.desc {
+  text-decoration: underline;
+}
+#wp-bookmarks .list {
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-#wp-bookmarks .bookmarks .bookmark {
+#wp-bookmarks .list .bookmark {
   position: relative;
   display: inline-block;
   list-style: none;
@@ -24,7 +70,7 @@
   transition: top 0.25s ease;
   top: 10px;
 }
-#wp-bookmarks .bookmarks .bookmark:after {
+#wp-bookmarks .list .bookmark:after {
   content: "";
   position: absolute;
   height: 0;
@@ -36,13 +82,13 @@
   -o-transition: height 0.25s ease;
   transition: height 0.25s ease;
 }
-#wp-bookmarks .bookmarks .bookmark:hover {
+#wp-bookmarks .list .bookmark:hover {
   top: 0;
 }
-#wp-bookmarks .bookmarks .bookmark:hover:after {
+#wp-bookmarks .list .bookmark:hover:after {
   height: 10px;
 }
-#wp-bookmarks .bookmarks .bookmark .bookmark-link {
+#wp-bookmarks .list .bookmark .bookmark-link {
   text-decoration: none;
   position: absolute;
   top: 0;
@@ -52,21 +98,21 @@
   display: block;
   z-index: 500;
 }
-#wp-bookmarks .bookmarks .bookmark .thumb {
+#wp-bookmarks .list .bookmark .thumb {
   background: #bbbbbb;
   width: 200px;
   height: 150px;
 }
-#wp-bookmarks .bookmarks .bookmark .details {
+#wp-bookmarks .list .bookmark .details {
   background: #fff;
   padding: 1em;
 }
-#wp-bookmarks .bookmarks .bookmark .details .tag-links {
+#wp-bookmarks .list .bookmark .details .tag-links {
   position: relative;
   z-index: 560;
   margin-top: 1rem;
 }
-#wp-bookmarks .bookmarks .bookmark .details .tag-links a {
+#wp-bookmarks .list .bookmark .details .tag-links a {
   color: #bbbbbb;
   cursor: pointer;
   font-size: 0.75rem;
@@ -78,7 +124,7 @@
   -o-transition: color 0.25s ease;
   transition: color 0.25s ease;
 }
-#wp-bookmarks .bookmarks .bookmark .details .tag-links a:hover {
+#wp-bookmarks .list .bookmark .details .tag-links a:hover {
   color: #86df35;
   text-decoration: underline;
 }

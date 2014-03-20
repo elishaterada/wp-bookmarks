@@ -1,10 +1,57 @@
-@wp-bookmarks-primary-color: #86DF35;
-@wp-bookmarks-demphasized-color: #BBB;
+@wp-bookmarks-primary: #86DF35;
+@wp-bookmarks-gray-light: #BBB;
+@wp-bookmarks-gray-dark: #BBB;
 
 #wp-bookmarks {
     margin: 0 auto;
     width: 100%;
-    .bookmarks {
+    font-size: 1em;
+    .search-group {
+        text-align: center;
+        position: relative;
+        .icon-search {
+            opacity: 0.2;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            margin-top: 1.3em;
+            margin-left: 1em;
+        }
+        .search {
+            font-family: inherit;
+            font-size: 2em;
+            background: none;
+            border: none;
+            color: @wp-bookmarks-gray-dark;
+            font-weight: 300;
+            padding: 0.5em 0.5em 0.5em 2em;
+            width: 8.5em;
+            -webkit-transition: background 0.25s ease;
+            -moz-transition: background 0.25s ease;
+            -ms-transition: background 0.25s ease;
+            -o-transition: background 0.25s ease;
+            transition: background 0.25s ease;
+            &:focus {
+                background: #fff;
+            }
+        }
+    }
+    .sort-options {
+        list-style: none;
+        margin: 0;
+        padding: 1em 2em;
+        text-align: right;
+        color: @wp-bookmarks-gray-light;
+        a {
+            cursor: pointer;
+            &:hover,
+            &.asc,
+            &.desc {
+                text-decoration: underline;
+            }
+        }
+    }
+    .list {
         overflow: hidden;
         margin: 0;
         padding: 0;
@@ -30,7 +77,7 @@
                 position: absolute;
                 height: 0;
                 width: 200px;
-                background: @wp-bookmarks-primary-color;
+                background: @wp-bookmarks-primary;
                 -webkit-transition: height 0.25s ease;
                 -moz-transition: height 0.25s ease;
                 -ms-transition: height 0.25s ease;
@@ -54,7 +101,7 @@
                 z-index: 500;
             }
             .thumb {
-                background: @wp-bookmarks-demphasized-color;
+                background: @wp-bookmarks-gray-light;
                 width: 200px;
                 height: 150px;
             }
@@ -66,7 +113,7 @@
                     z-index: 560;
                     margin-top: 1rem;
                     a {
-                        color: @wp-bookmarks-demphasized-color;
+                        color: @wp-bookmarks-gray-light;
                         cursor: pointer;
                         font-size: 0.75rem;
                         padding-bottom: 0.4rem;
@@ -77,7 +124,7 @@
                         -o-transition: color 0.25s ease;
                         transition: color 0.25s ease;
                         &:hover {
-                            color: @wp-bookmarks-primary-color;
+                            color: @wp-bookmarks-primary;
                             text-decoration: underline;
                         }
                     }

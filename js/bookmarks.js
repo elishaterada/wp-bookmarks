@@ -1,4 +1,4 @@
-/*global window, $:false, console:false, window:false; */
+/*global window, $:false, console:false, window:false, List:false; */
 
 function createTemplate(templatePath, bookmarksData) {
     var templateString = window.JST[templatePath](bookmarksData);
@@ -19,12 +19,24 @@ function getBookmarksData() {
     return bookmarksData;
 }
 
+function searchBookmarksData(bookmarksID) {
+    var options = {
+        valueNames: ['title', 'tag']
+    };
+    var bookmarkList = new List(bookmarksID, options);
+}
+
 $(function() {
 
+    var bookmarksID = 'wp-bookmarks';
+
+    // Query bookmark data and display
     var bookmarksData = getBookmarksData();
     var templatePath = 'tmpls/bookmark.html';
     var bookmarks = createTemplate(templatePath, bookmarksData);
+    $('#' + bookmarksID + ' .list').html(bookmarks);
 
-    $('#wp-bookmarks').html(bookmarks);
+    // Bind list.js search to the bookmark data
+    searchBookmarksData(bookmarksID);
 
 });

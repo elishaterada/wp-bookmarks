@@ -1,4 +1,4 @@
-/*! wp-bookmarks - v0.1.0 - 2014-03-17
+/*! wp-bookmarks - v0.1.0 - 2014-03-19
  * 
  * Copyright (c) 2014; * Licensed GPLv2+ */
 function createTemplate(templatePath, bookmarksData) {
@@ -20,12 +20,24 @@ function getBookmarksData() {
     return bookmarksData;
 }
 
+function searchBookmarksData(bookmarksID) {
+    var options = {
+        valueNames: ['title', 'tag']
+    };
+    var bookmarkList = new List(bookmarksID, options);
+}
+
 $(function() {
 
+    var bookmarksID = 'wp-bookmarks';
+
+    // Query bookmark data and display
     var bookmarksData = getBookmarksData();
     var templatePath = 'tmpls/bookmark.html';
     var bookmarks = createTemplate(templatePath, bookmarksData);
+    $('#' + bookmarksID + ' .list').html(bookmarks);
 
-    $('#wp-bookmarks').html(bookmarks);
+    // Bind list.js search to the bookmark data
+    searchBookmarksData(bookmarksID);
 
 });

@@ -7,3 +7,6 @@ body .container {
   max-width: 1170px;
   margin: 0 auto;
 }
+body #wp-bookmarks {
+  padding: 120px 0;
+}
