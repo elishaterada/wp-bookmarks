@@ -100,6 +100,8 @@
 }
 #wp-bookmarks .list .bookmark .thumb {
   background: #bbbbbb;
+  background-repeat: no-repeat;
+  background-position: center top;
   width: 200px;
   height: 150px;
 }

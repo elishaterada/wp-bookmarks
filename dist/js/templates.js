@@ -11,7 +11,9 @@ __p += '\n<li class="bookmark">\n    <a class="bookmark-link" href="' +
 ((__t = ( p.custom_fields.link )) == null ? '' : __t) +
 '" title="' +
 ((__t = ( p.title )) == null ? '' : __t) +
-'" target="_blank"></a>\n    <div class="thumb" style="background-image: url(\'\');"> </div>\n    <div class="details">\n        <strong class="title">' +
+'" target="_blank"></a>\n    <div class="thumb" style="background-image: url(\'' +
+((__t = ( p.thumbnail )) == null ? '' : __t) +
+'\');"> </div>\n    <div class="details">\n        <strong class="title">' +
 ((__t = ( p.title )) == null ? '' : __t) +
 '</strong>\n        <div class="tag-links">\n            ';
  _.each(p.taxonomy_wp_bookmarks_categories, function(t) { ;
