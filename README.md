@@ -24,8 +24,7 @@ WP Bookmarks is a single-page web app interface which provides simple and fast U
 
 WP Bookmarks depends on following:
 
-* A custom post type for bookmarks (or use */wordpress/register-custom-post-type.php*)
-* Custom fields for the bookmarks via Advanced Custom Fields plugin (import */wordpress/advanced-custom-field-export.xml*)
+* Posts data (custom post type) for bookmarks (use */wordpress/register-custom-post-type.php* to register)
+* Custom fields for the bookmarks (for ACF, just import */wordpress/advanced-custom-field-export.xml*)
 * jQuery
 * [Underscore.js](http://underscorejs.org/)
-* [Bootstrap 3](http://getbootstrap.com/)
