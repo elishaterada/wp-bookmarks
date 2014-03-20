@@ -21,7 +21,7 @@ function getBookmarksData() {
 
 function searchBookmarksData(bookmarksID) {
     var options = {
-        valueNames: ['title', 'tag']
+        valueNames: ['title', 'tags']
     };
     var bookmarkList = new List(bookmarksID, options);
 }

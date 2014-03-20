@@ -15,7 +15,7 @@ __p += '\n<li class="bookmark">\n    <a class="bookmark-link" href="' +
 ((__t = ( p.thumbnail )) == null ? '' : __t) +
 '\');"> </div>\n    <div class="details">\n        <strong class="title">' +
 ((__t = ( p.title )) == null ? '' : __t) +
-'</strong>\n        <div class="tag-links">\n            ';
+'</strong>\n        <div class="tags">\n            ';
  _.each(p.taxonomy_wp_bookmarks_categories, function(t) { ;
 __p += '\n            <span class="tag">\n                <a class="' +
 ((__t = ( t.slug )) == null ? '' : __t) +

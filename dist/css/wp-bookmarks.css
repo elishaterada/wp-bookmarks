@@ -109,12 +109,12 @@
   background: #fff;
   padding: 1em;
 }
-#wp-bookmarks .list .bookmark .details .tag-links {
+#wp-bookmarks .list .bookmark .details .tags {
   position: relative;
   z-index: 560;
   margin-top: 1rem;
 }
-#wp-bookmarks .list .bookmark .details .tag-links a {
+#wp-bookmarks .list .bookmark .details .tags a {
   color: #bbbbbb;
   cursor: pointer;
   font-size: 0.75rem;
@@ -126,7 +126,7 @@
   -o-transition: color 0.25s ease;
   transition: color 0.25s ease;
 }
-#wp-bookmarks .list .bookmark .details .tag-links a:hover {
+#wp-bookmarks .list .bookmark .details .tags a:hover {
   color: #86df35;
   text-decoration: underline;
 }

@@ -1,4 +1,4 @@
-/*! wp-bookmarks - v0.1.0 - 2014-03-19
+/*! wp-bookmarks - v0.1.0 - 2014-03-20
  * 
  * Copyright (c) 2014; * Licensed GPLv2+ */
 function createTemplate(templatePath, bookmarksData) {
@@ -22,7 +22,7 @@ function getBookmarksData() {
 
 function searchBookmarksData(bookmarksID) {
     var options = {
-        valueNames: ['title', 'tag']
+        valueNames: ['title', 'tags']
     };
     var bookmarkList = new List(bookmarksID, options);
 }
