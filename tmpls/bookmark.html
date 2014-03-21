@@ -1,13 +1,13 @@
 <% _.each(posts, function(p) { %>
 <li class="bookmark">
     <a class="bookmark-link" href="<%= p.custom_fields.link %>" title="<%= p.title %>" target="_blank"></a>
-    <div class="thumb" style="background-image: url('http://api.page2images.com/directlink?p2i_url=<%= p.custom_fields.link %>&p2i_device=6&p2i_screen=1024x768&p2i_size=200x150&p2i_imageformat=jpg&p2i_key=474e8a190fd33912');"> </div>
+    <div class="thumb" style="background-image: url('http://api.page2images.com/directlink?p2i_url=<%= p.custom_fields.link %>&p2i_device=6&p2i_screen=1200x900&p2i_size=200x150&p2i_imageformat=jpg&p2i_key=474e8a190fd33912');"> </div>
     <div class="details">
         <strong class="title"><%= p.title %></strong>
         <div class="tags">
             <% _.each(p.taxonomy_wp_bookmarks_categories, function(t) { %>
             <span class="tag">
-                <a class="<%= t.slug %>"><%= t.title %></a>
+                <a class="<%= t.slug %>">#<%= t.title %></a>
             </span>
             <% }); %>
         </div>
