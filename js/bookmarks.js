@@ -8,7 +8,7 @@ function createTemplate(templatePath, bookmarksData) {
 function getBookmarksData() {
     var bookmarksData = '';
     // For WordPress JSON API plugin, add this at the end of URL for better JSON output
-    // var optionalQueryParam = '&count=1000&exclude=status,type,author,title_plain,date,modified,categories,tags,comments,attachments,comment_count,comment_status';
+    // var optionQueryParam = '&count=1000&exclude=status,type,author,title_plain,date,modified,categories,tags,comments,attachments,comment_count,comment_status';
     $.ajax({
         url: '/sample/sample.json',
         dataType: 'json',
