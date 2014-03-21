@@ -11,9 +11,9 @@ __p += '\n<li class="bookmark">\n    <a class="bookmark-link" href="' +
 ((__t = ( p.custom_fields.link )) == null ? '' : __t) +
 '" title="' +
 ((__t = ( p.title )) == null ? '' : __t) +
-'" target="_blank"></a>\n    <div class="thumb" style="background-image: url(\'' +
-((__t = ( p.thumbnail )) == null ? '' : __t) +
-'\');"> </div>\n    <div class="details">\n        <strong class="title">' +
+'" target="_blank"></a>\n    <div class="thumb" style="background-image: url(\'http://api.page2images.com/directlink?p2i_url=' +
+((__t = ( p.custom_fields.link )) == null ? '' : __t) +
+'&p2i_device=6&p2i_screen=1024x768&p2i_size=200x150&p2i_imageformat=jpg&p2i_key=474e8a190fd33912\');"> </div>\n    <div class="details">\n        <strong class="title">' +
 ((__t = ( p.title )) == null ? '' : __t) +
 '</strong>\n        <div class="tags">\n            ';
  _.each(p.taxonomy_wp_bookmarks_categories, function(t) { ;
