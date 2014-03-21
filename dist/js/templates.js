@@ -16,7 +16,15 @@ __p += '\n<li class="bookmark">\n    <a class="bookmark-link" href="' +
 '&p2i_device=6&p2i_screen=1200x900&p2i_size=200x150&p2i_imageformat=jpg&p2i_key=474e8a190fd33912\');"> </div>\n    <div class="details">\n        <strong class="title">' +
 ((__t = ( p.title )) == null ? '' : __t) +
 '</strong>\n        <div class="tags">\n            ';
- _.each(p.taxonomy_wp_bookmarks_categories, function(t) { ;
+ _.each(p.taxonomy_categories, function(t) { ;
+__p += '\n            <span class="tag">\n                <a class="' +
+((__t = ( t.slug )) == null ? '' : __t) +
+'">#' +
+((__t = ( t.title )) == null ? '' : __t) +
+'</a>\n            </span>\n            ';
+ }); ;
+__p += '\n            ';
+ _.each(p.taxonomy_city, function(t) { ;
 __p += '\n            <span class="tag">\n                <a class="' +
 ((__t = ( t.slug )) == null ? '' : __t) +
 '">#' +

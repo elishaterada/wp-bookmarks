@@ -5,7 +5,12 @@
     <div class="details">
         <strong class="title"><%= p.title %></strong>
         <div class="tags">
-            <% _.each(p.taxonomy_wp_bookmarks_categories, function(t) { %>
+            <% _.each(p.taxonomy_categories, function(t) { %>
+            <span class="tag">
+                <a class="<%= t.slug %>">#<%= t.title %></a>
+            </span>
+            <% }); %>
+            <% _.each(p.taxonomy_city, function(t) { %>
             <span class="tag">
                 <a class="<%= t.slug %>">#<%= t.title %></a>
             </span>

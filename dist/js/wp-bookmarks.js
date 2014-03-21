@@ -1,4 +1,4 @@
-/*! wp-bookmarks - v0.1.0 - 2014-03-20
+/*! wp-bookmarks - v0.1.0 - 2014-03-21
  * 
  * Copyright (c) 2014; * Licensed GPLv2+ */
 function createTemplate(templatePath, bookmarksData) {
@@ -8,6 +8,8 @@ function createTemplate(templatePath, bookmarksData) {
 
 function getBookmarksData() {
     var bookmarksData = '';
+    // For WordPress JSON API plugin, add this at the end of URL for better JSON output
+    // var optionQueryParam = '&count=1000&exclude=status,type,author,title_plain,date,modified,categories,tags,comments,attachments,comment_count,comment_status';
     $.ajax({
         url: '/sample/sample.json',
         dataType: 'json',
