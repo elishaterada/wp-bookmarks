@@ -6,129 +6,132 @@
     margin: 0 auto;
     width: 100%;
     font-size: 1em;
-    .search-group {
-        text-align: center;
+}
+
+#wp-bookmarks .search-group {
+    text-align: center;
+    position: relative;
+    .icon-search {
+        opacity: 0.2;
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        margin-top: 1.3em;
+        margin-left: 1em;
+    }
+    .search {
+        -webkit-appearance: none;
+        font-family: inherit;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: @wp-bookmarks-gray-dark;
+        font-weight: 300;
+        padding: 0.5em 0.5em 0.5em 2em;
+        width: 8.5em;
+        -webkit-transition: background 0.25s ease;
+        -moz-transition: background 0.25s ease;
+        -ms-transition: background 0.25s ease;
+        -o-transition: background 0.25s ease;
+        transition: background 0.25s ease;
+        &:focus {
+            background: #fff;
+        }
+    }
+}
+
+#wp-bookmarks .sort-options {
+    list-style: none;
+    margin: 0;
+    padding: 1em 2em;
+    text-align: right;
+    color: @wp-bookmarks-gray-light;
+    a {
+        cursor: pointer;
+        &:hover,
+        &.asc,
+        &.desc {
+            text-decoration: underline;
+        }
+    }
+}
+
+#wp-bookmarks .list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    .bookmark {
         position: relative;
-        .icon-search {
-            opacity: 0.2;
-            position: absolute;
-            width: 2em;
-            height: 2em;
-            margin-top: 1.3em;
-            margin-left: 1em;
-        }
-        .search {
-            -webkit-appearance: none;
-            font-family: inherit;
-            font-size: 2em;
-            background: none;
-            border: none;
-            color: @wp-bookmarks-gray-dark;
-            font-weight: 300;
-            padding: 0.5em 0.5em 0.5em 2em;
-            width: 8.5em;
-            -webkit-transition: background 0.25s ease;
-            -moz-transition: background 0.25s ease;
-            -ms-transition: background 0.25s ease;
-            -o-transition: background 0.25s ease;
-            transition: background 0.25s ease;
-            &:focus {
-                background: #fff;
-            }
-        }
-    }
-    .sort-options {
+        display: inline-block;
         list-style: none;
-        margin: 0;
-        padding: 1em 2em;
-        text-align: right;
-        color: @wp-bookmarks-gray-light;
-        a {
-            cursor: pointer;
-            &:hover,
-            &.asc,
-            &.desc {
-                text-decoration: underline;
+        height: auto;
+        padding: 0;
+        margin: 14px;
+        width: 200px;
+        height: auto;
+        vertical-align: top;
+        -webkit-transition: top 0.25s ease;
+        -moz-transition: top 0.25s ease;
+        -ms-transition: top 0.25s ease;
+        -o-transition: top 0.25s ease;
+        transition: top 0.25s ease;
+        top: 10px;
+        &:after {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 200px;
+            background: @wp-bookmarks-primary;
+            -webkit-transition: height 0.25s ease;
+            -moz-transition: height 0.25s ease;
+            -ms-transition: height 0.25s ease;
+            -o-transition: height 0.25s ease;
+            transition: height 0.25s ease;
+        }
+        &:hover {
+            top: 0;
+            &:after {
+                height: 10px;
             }
         }
-    }
-    .list {
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        .bookmark {
-            position: relative;
-            display: inline-block;
-            list-style: none;
-            height: auto;
-            padding: 0;
-            margin: 14px;
+        .bookmark-link {
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            z-index: 500;
+        }
+        .thumb {
+            background: @wp-bookmarks-gray-light;
+            background-repeat: no-repeat;
+            background-position: center top;
             width: 200px;
-            height: auto;
-            vertical-align: top;
-            -webkit-transition: top 0.25s ease;
-            -moz-transition: top 0.25s ease;
-            -ms-transition: top 0.25s ease;
-            -o-transition: top 0.25s ease;
-            transition: top 0.25s ease;
-            top: 10px;
-            &:after {
-                content: "";
-                position: absolute;
-                height: 0;
-                width: 200px;
-                background: @wp-bookmarks-primary;
-                -webkit-transition: height 0.25s ease;
-                -moz-transition: height 0.25s ease;
-                -ms-transition: height 0.25s ease;
-                -o-transition: height 0.25s ease;
-                transition: height 0.25s ease;
-            }
-            &:hover {
-                top: 0;
-                &:after {
-                    height: 10px;
-                }
-            }
-            .bookmark-link {
-                text-decoration: none;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                display: block;
-                z-index: 500;
-            }
-            .thumb {
-                background: @wp-bookmarks-gray-light;
-                background-repeat: no-repeat;
-                background-position: center top;
-                width: 200px;
-                height: 150px;
-            }
-            .details {
-                background: #fff;
-                padding: 1em;
-                .tags {
-                    position: relative;
-                    z-index: 560;
-                    margin-top: 1rem;
-                    a {
-                        color: @wp-bookmarks-gray-light;
-                        cursor: pointer;
-                        font-size: 0.75rem;
-                        padding-bottom: 0.4rem;
-                        padding-right: 0.35rem;
-                        -webkit-transition: color 0.25s ease;
-                        -moz-transition: color 0.25s ease;
-                        -ms-transition: color 0.25s ease;
-                        -o-transition: color 0.25s ease;
-                        transition: color 0.25s ease;
-                        &:hover {
-                            color: @wp-bookmarks-primary;
-                            text-decoration: underline;
-                        }
+            height: 150px;
+        }
+        .details {
+            background: #fff;
+            padding: 1em;
+            .tags {
+                position: relative;
+                z-index: 560;
+                margin-top: 1rem;
+                a {
+                    color: @wp-bookmarks-gray-light;
+                    cursor: pointer;
+                    font-size: 0.75rem;
+                    padding-bottom: 0.4rem;
+                    padding-right: 0.35rem;
+                    -webkit-transition: color 0.25s ease;
+                    -moz-transition: color 0.25s ease;
+                    -ms-transition: color 0.25s ease;
+                    -o-transition: color 0.25s ease;
+                    transition: color 0.25s ease;
+                    &:hover {
+                        color: @wp-bookmarks-primary;
+                        text-decoration: underline;
                     }
                 }
             }
