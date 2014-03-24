@@ -1,4 +1,4 @@
-/*! wp-bookmarks - v0.1.0 - 2014-03-21
+/*! wp-bookmarks - v0.1.0 - 2014-03-23
  * 
  * Copyright (c) 2014; * Licensed GPLv2+ */
 function createTemplate(templatePath, bookmarksData) {
@@ -23,10 +23,24 @@ function getBookmarksData() {
 }
 
 function searchBookmarksData(bookmarksID) {
-    var options = {
-        valueNames: ['title', 'tags']
+
+    var fuzzyOptions = {
+        searchClass: 'fuzzy-search',
+        location: 0,
+        distance: 100,
+        threshold: 0.4,
+        multiSearch: true
     };
+
+    var options = {
+        valueNames: ['title', 'category', 'location'],
+        plugins: [
+            ListFuzzySearch(fuzzyOptions)
+        ]
+    };
+
     var bookmarkList = new List(bookmarksID, options);
+
 }
 
 $(function() {

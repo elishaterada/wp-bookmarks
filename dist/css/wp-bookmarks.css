@@ -15,7 +15,7 @@
   margin-top: 1.3em;
   margin-left: 1em;
 }
-#wp-bookmarks .search-group .search {
+#wp-bookmarks .search-group .search-input {
   -webkit-appearance: none;
   font-family: inherit;
   font-size: 2em;
@@ -31,7 +31,7 @@
   -o-transition: background 0.25s ease;
   transition: background 0.25s ease;
 }
-#wp-bookmarks .search-group .search:focus {
+#wp-bookmarks .search-group .search-input:focus {
   background: #fff;
 }
 #wp-bookmarks .sort-options {
@@ -109,24 +109,21 @@
   background: #fff;
   padding: 1em;
 }
+#wp-bookmarks .list .bookmark .details .title {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
 #wp-bookmarks .list .bookmark .details .tags {
   position: relative;
   z-index: 560;
-  margin-top: 1rem;
-}
-#wp-bookmarks .list .bookmark .details .tags a {
+  display: inline;
   color: #bbbbbb;
   cursor: pointer;
   font-size: 0.75rem;
   padding-bottom: 0.4rem;
-  padding-right: 0.35rem;
   -webkit-transition: color 0.25s ease;
   -moz-transition: color 0.25s ease;
   -ms-transition: color 0.25s ease;
   -o-transition: color 0.25s ease;
   transition: color 0.25s ease;
-}
-#wp-bookmarks .list .bookmark .details .tags a:hover {
-  color: #86df35;
-  text-decoration: underline;
 }

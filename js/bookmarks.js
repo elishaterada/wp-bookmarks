@@ -22,10 +22,24 @@ function getBookmarksData() {
 }
 
 function searchBookmarksData(bookmarksID) {
-    var options = {
-        valueNames: ['title', 'tags']
+
+    var fuzzyOptions = {
+        searchClass: 'fuzzy-search',
+        location: 0,
+        distance: 100,
+        threshold: 0.4,
+        multiSearch: true
     };
+
+    var options = {
+        valueNames: ['title', 'category', 'location'],
+        plugins: [
+            ListFuzzySearch(fuzzyOptions)
+        ]
+    };
+
     var bookmarkList = new List(bookmarksID, options);
+
 }
 
 $(function() {

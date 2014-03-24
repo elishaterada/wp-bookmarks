@@ -19,7 +19,7 @@
         margin-top: 1.3em;
         margin-left: 1em;
     }
-    .search {
+    .search-input {
         -webkit-appearance: none;
         font-family: inherit;
         font-size: 2em;
@@ -114,26 +114,23 @@
         .details {
             background: #fff;
             padding: 1em;
+            .title {
+                margin-bottom: 0.5rem;
+                font-weight: normal;
+            }
             .tags {
                 position: relative;
                 z-index: 560;
-                margin-top: 1rem;
-                a {
-                    color: @wp-bookmarks-gray-light;
-                    cursor: pointer;
-                    font-size: 0.75rem;
-                    padding-bottom: 0.4rem;
-                    padding-right: 0.35rem;
-                    -webkit-transition: color 0.25s ease;
-                    -moz-transition: color 0.25s ease;
-                    -ms-transition: color 0.25s ease;
-                    -o-transition: color 0.25s ease;
-                    transition: color 0.25s ease;
-                    &:hover {
-                        color: @wp-bookmarks-primary;
-                        text-decoration: underline;
-                    }
-                }
+                display: inline;
+                color: @wp-bookmarks-gray-light;
+                cursor: pointer;
+                font-size: 0.75rem;
+                padding-bottom: 0.4rem;
+                -webkit-transition: color 0.25s ease;
+                -moz-transition: color 0.25s ease;
+                -ms-transition: color 0.25s ease;
+                -o-transition: color 0.25s ease;
+                transition: color 0.25s ease;
             }
         }
     }
