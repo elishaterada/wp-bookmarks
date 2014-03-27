@@ -105,11 +105,18 @@
             z-index: 500;
         }
         .thumb {
-            background: @wp-bookmarks-gray-light;
-            background-repeat: no-repeat;
-            background-position: center top;
+            background-color: @wp-bookmarks-gray-light;
             width: 200px;
             height: 150px;
+            background-position: center top;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
         .details {
             background: #fff;
