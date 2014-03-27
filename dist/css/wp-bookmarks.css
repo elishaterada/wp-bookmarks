@@ -53,6 +53,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 #wp-bookmarks .list .bookmark {
   position: relative;
